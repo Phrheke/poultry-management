@@ -1,0 +1,306 @@
+/* Reset styles */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: var(--clr-bg);
+    font-family: 'Inter', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    margin-bottom: 0;
+}
+
+/*  */
+.btn{
+    display: inline-block;
+    padding: 12px 32px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 11px;
+    border: none;
+    background-color: blue;
+}
+
+.flex-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-container{
+    max-width: 1240px;
+    margin: auto;
+}
+
+
+/* navbar Starts */
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 0 20px;
+}
+
+@media screen and (min-width: 769px) {
+    .nav__logo{
+        margin-right: 40px;
+    }
+  }
+
+.nav::after, .nav::before {
+    content: none;
+}
+
+.nav-container{
+    background-color: #285430;
+}
+
+.nav .btn,
+.nav .btn:hover{
+    color: black;
+    background-color: white;
+}
+
+.btn:hover{
+    background-color: rgba(0, 0, 255, 0.69);
+}
+
+.nav__logo{
+    /* margin-right: 60px; */
+    color: white;
+    font-weight: 600;
+    font-size: 27px;
+}
+
+.nav__logo:hover{
+    color: white;
+}
+
+.nav__list{
+    flex: 1;
+}
+
+.nav__list .nav__item{
+    display: inline-block;
+    color: var(--clr-secondary);
+    font-size: var(--fs-300);
+    font-weight: var(--fw-400);
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav__list .nav__link{
+    color: white;
+    position: relative;
+    padding: 12px 22px;
+    font-size: 16px;
+}
+
+.nav__list .nav__link:hover{
+    display: inline-block;
+    color: black;
+    border-radius: 11px;
+    background-color: white;
+    border: none;
+}
+
+/* MOBILE MENU STYLING */
+.mobile-menu{
+    position: fixed;
+    top: 90px;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px 0 0 25px;
+    background-color: #285430;
+    transition: 300ms ease-in-out;
+}
+
+.mobile-menu .mobile-menu__link{
+    display: block;
+    padding: 15px 25px 15px 0;
+    font-size: 18px;
+    color: white;
+}
+
+.mobile-menu .mobile-menu__link a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.mobile-menu .divider{
+    padding: 5px 25px 15px 0;
+    border: none;
+}
+
+.mobile-menu .divider::before{
+    content: "";
+    display: block;
+    border-top: 2px solid rgba(255, 255, 255, 0.678);
+}
+
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 27px;
+    height: 19px;
+}
+
+.hamburger span{
+    display: block;
+    background: white;
+    height: 3px;
+    width: 100%;
+    transition: 300ms ease-in-out;
+}
+
+/* Hamburger Animation */
+.is-toggled .top{
+    transform: translateY(8px) rotate(45deg);
+}
+
+.is-toggled .middle{
+    opacity: 0;
+} 
+
+.is-toggled .bottom{
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/*translate the menu off the screen and translate it back in when the hamburger menu is clicked*/
+.is-hidden{
+    transform: translateX(100%);
+}
+
+/*no scroll when the mobile menu is open*/
+.no-scroll{
+    overflow: hidden;
+}
+
+@media (max-width: 819px){
+    .hide-for-mobile{
+        display: none !important;
+    }
+}
+
+@media (min-width: 820px){
+    .hide-for-desktop{
+        display: none;
+    }
+}
+/* navbar Ends */
+
+/* Login Form Starts */
+.login-form .btn{
+    margin-top: 15px;
+    width: 100%;
+}
+
+.login-form input{
+    height: 40px;
+    border-radius: 9px;
+}
+
+/* Login Form Ends */
+
+
+/* Data Cards starts */
+.data-card{
+    color: white;
+    padding: 22px;
+    background-color: #285430;
+    border-radius: 11px;
+    box-shadow: 5px 12px 22px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 590px) {
+    .data-card{
+        margin-bottom: 15px;
+    }
+}
+
+/* Data Cards ends */
+
+/* Quarantine List starts*/
+.btn-delete{
+    display: inline-block;
+    padding: 9px 22px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 11px;
+    background-color: red;
+    cursor: pointer;
+}
+
+.btn-delete:hover{
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 0, 0, 0.726);
+}
+
+/* Quarantine List ends*/
+
+
+/* Communications Page */
+.communications-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.contact-list{
+    flex-basis: 40%
+}
+
+.contact-card{
+    display: flex;
+    align-items: center;
+    border-radius: 11px;
+    box-shadow: 5px 12px 22px rgba(95, 95, 95, 0.2);
+    padding: 3px 5px;
+}
+
+.contact-card__header{
+    margin-right: 5px
+}
+
+.contact-card__header h2{
+    font-size: 18px;
+    margin: 0;
+}
+
+.contact-card__header p{
+    font-size: 14px;
+    color: grey;
+    margin: 0;
+}
+
+.contact-form{
+    flex-basis: 40%;
+}
+
+.contact-form h2{
+    margin-top: 0;
+}
+
+.contact-links li{
+    display: inline-block;
+}
